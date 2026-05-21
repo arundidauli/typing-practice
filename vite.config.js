@@ -3,7 +3,8 @@ import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  base: '/typing-master-fun/',
+  // Relative base: static dist works locally, on any host, and on GitHub Pages project sites.
+  base: './',
   build: {
     outDir: 'dist',
     rollupOptions: {

@@ -49,4 +49,4 @@ Pull requests should include a concise summary, validation steps (`npm run lint`
 
 ## Security & Configuration Tips
 
-Do not commit secrets or environment-specific credentials. The app currently uses client-side storage only, so treat localStorage data as user-controlled. Keep `vite.config.js` `base` aligned with the deployment path, currently `/typing-master-fun/`.
+Do not commit secrets or environment-specific credentials. The app currently uses client-side storage only, so treat localStorage data as user-controlled. The Vite `base` is `./` for portable static output (local preview, arbitrary static hosts, and GitHub Pages project sites without a fixed repo name).

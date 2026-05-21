@@ -1,8 +1,6 @@
 # Typing Master Fun
 
-A fast, polished typing practice game built with React and Vite. Train your speed and accuracy, earn XP, level up, unlock achievements, and track progress—all in the browser with no account required.
-
-**Live site:** `https://<your-github-username>.github.io/typing-master-fun/`
+A fast, polished typing practice game built with React and Vite. Train your speed and accuracy, earn XP, level up, unlock achievements, and track progress—all in the browser with no account required. Everything runs client-side; no server or account is required.
 
 ## Features
 
@@ -37,21 +35,23 @@ npm run preview  # serve the production build locally
 npm run lint     # ESLint
 ```
 
-## Deploy to GitHub Pages
+## Static build (no hosting required)
 
-This repo is set up for GitHub Pages. The repository name **must** be `typing-master-fun` so it matches the Vite `base` path in `vite.config.js` (`/typing-master-fun/`).
+```bash
+npm run build
+```
 
-1. Create a new GitHub repository named **`typing-master-fun`**.
-2. Push this project to the **`main`** branch.
-3. In the repo on GitHub: **Settings → Pages → Build and deployment**
-   - Source: **GitHub Actions**
-4. On the first push to `main`, the workflow in [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) builds and deploys automatically.
+The production files land in `dist/`. Preview them locally:
 
-After deploy, the site is available at:
+```bash
+npm run preview
+```
 
-`https://<your-github-username>.github.io/typing-master-fun/`
+You can also serve `dist/` with any static file server, or open `dist/index.html` in a browser. Asset paths use a relative `base` (`./` in `vite.config.js`), so the build works from a folder path without extra configuration.
 
-Replace `<your-github-username>` with your GitHub username. Update the `og:url` and `og:image` meta tags in `index.html` if you add a social preview image.
+### Optional: GitHub Pages later
+
+If you publish to GitHub Pages later, upload the **contents** of `dist/` (not the repo root). The build includes `public/.nojekyll` so GitHub does not run Jekyll on the output. A project site at `https://<username>.github.io/<repo>/` works with the default relative base—no workflow or hosting setup is included in this repo.
 
 ## Project structure
 
