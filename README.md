@@ -49,9 +49,14 @@ npm run preview
 
 You can also serve `dist/` with any static file server, or open `dist/index.html` in a browser. Asset paths use a relative `base` (`./` in `vite.config.js`), so the build works from a folder path without extra configuration.
 
-### Optional: GitHub Pages later
+### GitHub Pages
 
-If you publish to GitHub Pages later, upload the **contents** of `dist/` (not the repo root). The build includes `public/.nojekyll` so GitHub does not run Jekyll on the output. A project site at `https://<username>.github.io/<repo>/` works with the default relative base—no workflow or hosting setup is included in this repo.
+Do **not** point Pages at the repo root (that serves dev `index.html` and breaks with `/src/main.jsx` 404s). Use the deploy workflow instead:
+
+1. **Settings → Pages → Build and deployment** → Source: **GitHub Actions**
+2. Push to `main` — [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) builds `dist/` and deploys it.
+
+Site URL: `https://arundidauli.github.io/typing-practice/`
 
 ## Project structure
 
