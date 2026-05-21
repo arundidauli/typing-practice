@@ -51,12 +51,14 @@ You can also serve `dist/` with any static file server, or open `dist/index.html
 
 ### GitHub Pages
 
-Do **not** point Pages at the repo root (that serves dev `index.html` and breaks with `/src/main.jsx` 404s). Use the deploy workflow instead:
+The site is published from the **`docs/`** folder (built static files), not the repo root.
 
-1. **Settings → Pages → Build and deployment** → Source: **GitHub Actions**
-2. Push to `main` — [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml) builds `dist/` and deploys it.
+1. **Settings → Pages → Build and deployment** → Source: **Deploy from a branch** → Branch: `main` → Folder: **`/docs`**
+2. Pushes to `main` run [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml), which rebuilds and updates `docs/`.
 
-Site URL: `https://arundidauli.github.io/typing-practice/`
+Site URL: **https://arundidauli.github.io/typing-practice/**
+
+Do not use the repo root (`/`) as the Pages folder — that serves dev `index.html` and causes a blank page (`/src/main.jsx` 404).
 
 ## Project structure
 
