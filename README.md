@@ -1,4 +1,4 @@
-# Typing Master Fun
+# Typing Master Fun [Live Demo](https://arundidauli.github.io/typing-practice/)
 
 A fast, polished typing practice game built with React and Vite. Train your speed and accuracy, earn XP, level up, unlock achievements, and track progress—all in the browser with no account required. Everything runs client-side; no server or account is required.
 
