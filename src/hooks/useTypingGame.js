@@ -126,7 +126,15 @@ export const useTypingGame = ({ duration, difficulty, category, onComplete }) =>
 
     // Auto scroll / extend text if running low
     if (newInput.length > text.length - 100) {
-      setText(prev => prev + ' ' + getWordList(difficulty, category));
+      // Pass current difficulty and category to ensure extension matches settings
+      setText(prev => {
+        const extension = getWordList(difficulty, category);
+        // Avoid adding the exact same string twice if possible
+        if (prev.endsWith(extension)) {
+          return prev + ' ' + getWordList(difficulty, category);
+        }
+        return prev + ' ' + extension;
+      });
     }
   }, [started, finished, text, duration, calcWPM, onComplete, difficulty, category]);
 

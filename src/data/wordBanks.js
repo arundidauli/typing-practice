@@ -16,6 +16,17 @@ export const wordBanks = {
       'A river winds its way through the lush valley.',
       'The desert sands stretch out as far as the eye can see.',
     ],
+    tech: [
+      'web page', 'mouse click', 'key board', 'screen monitor', 'data file', 'soft ware',
+      'hard drive', 'net work', 'smart phone', 'email chat', 'save icon', 'open window',
+    ],
+    stories: [
+      'The cat sat on the mat and fell fast asleep.',
+      'The sun came out after the rain stopped falling.',
+      'I like to go for a long walk in the park.',
+      'A big red car drove past my house today.',
+      'The bird built a small nest in the green tree.',
+    ],
   },
 
   intermediate: {
@@ -129,14 +140,18 @@ export const wordBanks = {
   },
 };
 
+// Helper to track last used snippets to avoid immediate repetition
+const lastUsedSnippets = new Map();
+
 export const getWordList = (difficulty, category) => {
   if (category === 'random') {
     return generateRandomWords(40);
   }
 
+  // Try to find content specifically in the requested difficulty
   let content = wordBanks[difficulty]?.[category];
 
-  // If not found in requested difficulty, look in other difficulties
+  // If not found in requested difficulty, look in other difficulties as a fallback
   if (!content) {
     const difficulties = ['beginner', 'intermediate', 'pro', 'fun'];
     for (const d of difficulties) {
@@ -149,27 +164,43 @@ export const getWordList = (difficulty, category) => {
 
   // Final fallback to common words if still not found
   if (!content) {
-    return generateRandomWords(30);
+    return generateRandomWords(40);
   }
 
   // For coherent text categories, preserve word order
   const preserveOrderCategories = ['stories', 'quotes', 'literature', 'science', 'nature', 'motivational', 'funny'];
 
   if (preserveOrderCategories.includes(category)) {
-    const randomSnippet = Array.isArray(content)
-      ? content[Math.floor(Math.random() * content.length)]
-      : content;
-    return randomSnippet;
+    if (Array.isArray(content)) {
+      // Avoid immediate repetition by tracking the last used snippet for this category
+      const key = `${difficulty}-${category}`;
+      const lastIdx = lastUsedSnippets.get(key);
+      let idx;
+      
+      if (content.length > 1) {
+        do {
+          idx = Math.floor(Math.random() * content.length);
+        } while (idx === lastIdx);
+      } else {
+        idx = 0;
+      }
+      
+      lastUsedSnippets.set(key, idx);
+      return content[idx];
+    }
+    return content;
   }
 
   // For word-based categories, shuffle for variety
   if (Array.isArray(content) && typeof content[0] === 'string' && content[0].includes(' ')) {
     // If they are phrases, shuffle the phrases instead of individual words
-    return shuffleArray(content).slice(0, 20).join(' ');
+    const shuffledPhrases = shuffleArray(content);
+    // Take more phrases for 120s sessions
+    return shuffledPhrases.slice(0, 30).join(' ');
   }
 
   const words = Array.isArray(content) ? content : content[0].split(' ');
-  return shuffleArray(words).slice(0, 40).join(' ');
+  return shuffleArray(words).slice(0, 60).join(' ');
 };
 
 export const generateRandomWords = (count = 40) => {
