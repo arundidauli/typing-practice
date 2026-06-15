@@ -4,6 +4,18 @@ export const wordBanks = {
       'cat dog run jump play walk talk sing read look make have like time know people into year your good some could them see other than then now look only come its over think also back after use two how our work first well way even new want because any these give day most us',
     ],
     words: 'the quick brown fox jumps over the lazy dog pack my box with five dozen liquor jugs how vexingly quick daft zebras jump sphinx of black quartz judge my vow'.split(' '),
+    nature: [
+      'The sun shines bright on the green trees.',
+      'A small bird flies high in the blue sky.',
+      'Rain falls softly on the dry ground today.',
+      'Flowers bloom in the warm spring breeze.',
+      'The moon glows in the dark night sky.',
+      'The ocean waves crash against the sandy shore.',
+      'A gentle wind rustles the leaves in the forest.',
+      'The snowy peaks of the mountains touch the clouds.',
+      'A river winds its way through the lush valley.',
+      'The desert sands stretch out as far as the eye can see.',
+    ],
   },
 
   intermediate: {
@@ -13,11 +25,32 @@ export const wordBanks = {
       'hardware', 'network', 'protocol', 'server', 'browser', 'website', 'developer',
       'frontend', 'backend', 'fullstack', 'debugging', 'refactor', 'optimize', 'pipeline',
       'iteration', 'recursion', 'exception', 'callback', 'promise', 'async', 'module',
+      'encryption', 'decryption', 'middleware', 'authentication', 'authorization',
+      'scalability', 'performance', 'latency', 'bandwidth', 'throughput', 'architecture',
     ],
     motivational: [
-      'Every keystroke', 'builds your speed', 'Practice makes', 'perfect results',
-      'Focus your mind', 'and type with flow', 'Consistency beats', 'talent every time',
-      'Small progress', 'daily adds up', 'Trust the process', 'and keep going',
+      'Every keystroke builds your speed and precision.',
+      'Practice makes perfect results over time.',
+      'Focus your mind and type with a steady flow.',
+      'Consistency beats talent every single time.',
+      'Small progress daily adds up to big results.',
+      'Trust the process and keep going forward.',
+      'Believe in yourself and your ability to improve.',
+      'The only way to fail is to stop trying.',
+      'Push yourself beyond your perceived limits.',
+      'Success is the sum of small efforts repeated.',
+    ],
+    science: [
+      'Photosynthesis is the process used by plants to convert light energy into chemical energy.',
+      'Gravity is a fundamental force that attracts objects with mass toward each other.',
+      'The solar system consists of the Sun and everything that orbits around it.',
+      'Atoms are the basic building blocks of matter and consist of protons and neutrons.',
+      'The theory of relativity states that time and space are linked together.',
+      'DNA is the molecule that carries the genetic instructions for all living things.',
+      'Evolution is the process of change in the inherited traits of a population.',
+      'The Big Bang theory explains the origin and evolution of the universe.',
+      'Quantum mechanics describes the behavior of matter and energy at the smallest scales.',
+      'Thermodynamics is the study of the relationship between heat and other forms of energy.',
     ],
   },
 
@@ -27,44 +60,112 @@ export const wordBanks = {
       'polymorphism and encapsulation', 'distributed systems theory', 'machine learning gradient descent',
       'neural network backpropagation', 'functional reactive programming', 'dependency injection container',
       'event-driven architecture pattern', 'concurrent data structures', 'memory allocation strategy',
+      'immutable data structures', 'garbage collection algorithm', 'just-in-time compilation',
+      'kernel space vs user space', 'load balancing strategies', 'service discovery mechanism',
     ],
     quotes: [
-      'The best way to predict the future is to create it',
-      'Code is like humor when you have to explain it it is bad',
-      'First solve the problem then write the code',
-      'Simplicity is the soul of efficiency',
-      'Make it work make it right make it fast',
-      'Talk is cheap show me the code',
+      'The best way to predict the future is to create it.',
+      'Code is like humor; when you have to explain it, it is bad.',
+      'First, solve the problem. Then, write the code.',
+      'Simplicity is the soul of efficiency.',
+      'Make it work, make it right, make it fast.',
+      'Talk is cheap. Show me the code.',
+      'Innovation distinguishes between a leader and a follower.',
+      'Your time is limited, so dont waste it living someone elses life.',
+      'Stay hungry, stay foolish.',
+      'The only way to do great work is to love what you do.',
+    ],
+    literature: [
+      'It was the best of times, it was the worst of times, it was the age of wisdom, it was the age of foolishness.',
+      'All happy families are alike; each unhappy family is unhappy in its own way.',
+      'In a hole in the ground there lived a hobbit. Not a nasty, dirty, wet hole, filled with the ends of worms.',
+      'Call me Ishmael. Some years ago - never mind how long precisely - I thought I would sail about a little.',
+      'The sky above the port was the color of television, tuned to a dead channel.',
+      'It was a bright cold day in April, and the clocks were striking thirteen.',
+      'Mr. and Mrs. Dursley, of number four, Privet Drive, were proud to say that they were perfectly normal.',
+      'Whether I shall turn out to be the hero of my own life, or whether that station will be held by anybody else, these pages must show.',
+      'I am an invisible man. No, I am not a spook like those who haunted Edgar Allan Poe; nor am I one of your Hollywood movie ectoplasms.',
+      'Happy families are all alike; every unhappy family is unhappy in its own way.',
     ],
   },
 
   fun: {
     gaming: [
-      'respawn point activated', 'legendary loot acquired', 'achievement unlocked boss defeated',
-      'critical hit multiplied by three', 'stealth mode engaged silently',
-      'power up collected maximum energy', 'combo streak extended brilliantly',
-      'new high score obliterated previous record', 'final boss battle commencing now',
+      'respawn point activated legendary loot acquired',
+      'achievement unlocked boss defeated with critical hit',
+      'stealth mode engaged silently power up collected',
+      'combo streak extended brilliantly new high score',
+      'final boss battle commencing now prepare for combat',
+      'tactical reload initiated squad leader confirmed',
+      'fast travel point discovered map updated',
+      'crafting recipe learned inventory space full',
+      'guild invitation received dungeon crawl starting',
+      'hidden easter egg found developers message revealed',
     ],
     funny: [
-      'The coffee machine broke and everyone panicked',
-      'My cat walked across the keyboard and wrote better code',
-      'Autocorrect changed my presentation to a catastrophe',
-      'I told a UDP joke but you might not get it',
-      'There are only ten kinds of people in the world',
-      'A SQL query walks into a bar and joins two tables',
-      'Why do programmers prefer dark mode because light attracts bugs',
+      'The coffee machine broke and everyone panicked instantly.',
+      'My cat walked across the keyboard and wrote better code than me.',
+      'Autocorrect changed my presentation to a complete catastrophe.',
+      'I told a UDP joke but you might not get it at all.',
+      'There are only ten kinds of people in the world: those who understand binary.',
+      'A SQL query walks into a bar and joins two tables together.',
+      'Why do programmers prefer dark mode? Because light attracts bugs.',
+      'I used to be a programmer but then I took an arrow to the knee.',
+      'My software doesnt have bugs; it just has unintended features.',
+      'A programmer is a person who turns caffeine into code.',
+    ],
+    stories: [
+      'Once upon a time in a digital kingdom, a young programmer sought the legendary missing semicolon.',
+      'The old lighthouse stood tall against the crashing waves, its light a beacon for lost sailors.',
+      'Deep in the forest, a hidden path led to a clearing where ancient stones whispered secrets of the past.',
+      'The spaceship hummed quietly as it drifted through the vast, silent expanse of the nebula.',
+      'Under the city lights, the detective waited for the contact, wondering if the rain would ever stop.',
+      'The clockmaker spent years perfecting a mechanism that could capture the essence of a single moment.',
+      'Across the frozen tundra, the pack of wolves moved like grey shadows against the blinding white snow.',
+      'The clock chimed midnight, and suddenly all the toys in the attic began to stir and whisper.',
+      'A mysterious letter arrived at his doorstep, sealed with a wax crest he hadnt seen in twenty years.',
+      'The mountain climber reached the summit just as the sun began to rise over the horizon.',
     ],
   },
 };
 
 export const getWordList = (difficulty, category) => {
-  const bank = wordBanks[difficulty];
-  if (!bank) return generateRandomWords(30);
+  if (category === 'random') {
+    return generateRandomWords(40);
+  }
 
-  const content = bank[category] || Object.values(bank)[0];
+  let content = wordBanks[difficulty]?.[category];
+
+  // If not found in requested difficulty, look in other difficulties
+  if (!content) {
+    const difficulties = ['beginner', 'intermediate', 'pro', 'fun'];
+    for (const d of difficulties) {
+      if (wordBanks[d]?.[category]) {
+        content = wordBanks[d][category];
+        break;
+      }
+    }
+  }
+
+  // Final fallback to common words if still not found
+  if (!content) {
+    return generateRandomWords(30);
+  }
+
+  // For coherent text categories, preserve word order
+  const preserveOrderCategories = ['stories', 'quotes', 'literature', 'science', 'nature', 'motivational', 'funny'];
+
+  if (preserveOrderCategories.includes(category)) {
+    const randomSnippet = Array.isArray(content)
+      ? content[Math.floor(Math.random() * content.length)]
+      : content;
+    return randomSnippet;
+  }
+
+  // For word-based categories, shuffle for variety
   if (Array.isArray(content) && typeof content[0] === 'string' && content[0].includes(' ')) {
-    const allWords = content.join(' ').split(' ').filter(w => w.length > 0);
-    return shuffleArray(allWords).slice(0, 60).join(' ');
+    // If they are phrases, shuffle the phrases instead of individual words
+    return shuffleArray(content).slice(0, 20).join(' ');
   }
 
   const words = Array.isArray(content) ? content : content[0].split(' ');
@@ -82,6 +183,42 @@ export const generateRandomWords = (count = 40) => {
     'other', 'than', 'then', 'now', 'look', 'only', 'come', 'its', 'over', 'think',
     'also', 'back', 'after', 'use', 'two', 'how', 'our', 'work', 'first', 'well',
     'way', 'even', 'new', 'want', 'because', 'any', 'these', 'give', 'day', 'most',
+    'us', 'down', 'should', 'little', 'world', 'school', 'still', 'through', 'mean',
+    'hand', 'state', 'might', 'white', 'part', 'home', 'long', 'keep', 'country',
+    'star', 'side', 'rain', 'field', 'city', 'story', 'night', 'light', 'green',
+    'life', 'paper', 'water', 'earth', 'fire', 'wind', 'mind', 'heart', 'soul',
+    'dream', 'hope', 'fear', 'love', 'cold', 'heat', 'summer', 'winter', 'fall',
+    'spring', 'walk', 'run', 'swim', 'climb', 'sleep', 'wake', 'laugh', 'cry',
+    'smile', 'frown', 'think', 'feel', 'touch', 'hear', 'see', 'smell', 'taste',
+    'quick', 'slow', 'bright', 'dark', 'heavy', 'light', 'strong', 'weak', 'big',
+    'small', 'large', 'tiny', 'high', 'low', 'near', 'far', 'hard', 'soft', 'rough',
+    'smooth', 'sharp', 'dull', 'hot', 'cold', 'wet', 'dry', 'full', 'empty', 'open',
+    'closed', 'early', 'late', 'old', 'new', 'young', 'rich', 'poor', 'happy', 'sad',
+    'apple', 'banana', 'orange', 'cherry', 'grape', 'lemon', 'melon', 'peach', 'pear',
+    'plum', 'berry', 'bread', 'cheese', 'butter', 'milk', 'water', 'juice', 'coffee',
+    'tea', 'sugar', 'salt', 'pepper', 'spice', 'honey', 'meat', 'fish', 'egg', 'cake',
+    'pie', 'cookie', 'candy', 'mountain', 'river', 'ocean', 'lake', 'valley', 'hill',
+    'island', 'forest', 'desert', 'beach', 'garden', 'park', 'street', 'road', 'bridge',
+    'house', 'building', 'room', 'door', 'window', 'wall', 'floor', 'roof', 'bed',
+    'chair', 'table', 'desk', 'lamp', 'clock', 'phone', 'book', 'pen', 'pencil',
+    'paper', 'bag', 'shoe', 'shirt', 'hat', 'coat', 'dog', 'cat', 'bird', 'fish',
+    'horse', 'cow', 'sheep', 'pig', 'chicken', 'duck', 'rabbit', 'lion', 'tiger',
+    'bear', 'elephant', 'monkey', 'snake', 'frog', 'bee', 'ant', 'spider', 'blue',
+    'red', 'yellow', 'black', 'white', 'gray', 'brown', 'purple', 'pink', 'gold',
+    'silver', 'zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight',
+    'nine', 'ten', 'north', 'south', 'east', 'west', 'left', 'right', 'front', 'back',
+    'up', 'down', 'above', 'below', 'inside', 'outside', 'near', 'far', 'here', 'there',
+    'today', 'yesterday', 'tomorrow', 'now', 'then', 'soon', 'always', 'never', 'often',
+    'sometimes', 'happy', 'sad', 'angry', 'brave', 'calm', 'clever', 'kind', 'proud',
+    'quiet', 'wise', 'cloud', 'sun', 'moon', 'star', 'sky', 'rain', 'snow', 'storm',
+    'thunder', 'lightning', 'morning', 'afternoon', 'evening', 'night', 'week', 'month',
+    'year', 'century', 'history', 'science', 'math', 'music', 'art', 'sport', 'game',
+    'movie', 'photo', 'camera', 'radio', 'plane', 'train', 'car', 'bike', 'ship', 'boat',
+    'space', 'alien', 'planet', 'rocket', 'galaxy', 'future', 'past', 'present', 'gift',
+    'money', 'job', 'boss', 'friend', 'family', 'child', 'adult', 'person', 'people',
+    'team', 'group', 'class', 'party', 'peace', 'war', 'law', 'fact', 'truth', 'lie',
+    'idea', 'memory', 'secret', 'dream', 'wish', 'hope', 'life', 'death', 'health',
+    'spirit', 'energy', 'power', 'force', 'nature', 'animal', 'plant', 'flower', 'tree',
   ];
   return shuffleArray(common).slice(0, count).join(' ');
 };
@@ -96,11 +233,15 @@ const shuffleArray = (arr) => {
 };
 
 export const contentCategories = [
-  { id: 'fun', label: 'Common words', description: 'Short everyday words' },
-  { id: 'tech', label: 'Tech words', description: 'Code and technology' },
-  { id: 'quotes', label: 'Quotes', description: 'Short phrases' },
-  { id: 'gaming', label: 'Gaming', description: 'Game vocabulary' },
-  { id: 'funny', label: 'Sentences', description: 'Longer sentence practice' },
+  { id: 'fun', label: 'Common words', description: 'Most used everyday words' },
+  { id: 'random', label: 'Random Mix', description: 'A unpredictable mix of common words' },
+  { id: 'stories', label: 'Stories', description: 'Coherent short narratives' },
+  { id: 'literature', label: 'Literature', description: 'Classic book excerpts' },
+  { id: 'tech', label: 'Technology', description: 'Code and tech terminology' },
+  { id: 'science', label: 'Science', description: 'Scientific facts and theory' },
+  { id: 'nature', label: 'Nature', description: 'Descriptions of the natural world' },
+  { id: 'quotes', label: 'Quotes', description: 'Famous and inspiring sayings' },
+  { id: 'funny', label: 'Funny', description: 'Humorous sentences and jokes' },
 ];
 
 export const difficultyLevels = [

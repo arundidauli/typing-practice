@@ -258,6 +258,9 @@ const TypingArea = ({ onResult, soundEnabled, onPressedKey }) => {
               </button>
             ))}
           </div>
+          <p className="text-[11px] text-secondary opacity-70 italic min-h-[1rem]">
+            {difficultyLevels.find(d => d.id === difficulty)?.desc}
+          </p>
         </div>
 
         <div className="space-y-2">
@@ -278,6 +281,9 @@ const TypingArea = ({ onResult, soundEnabled, onPressedKey }) => {
               </button>
             ))}
           </div>
+          <p className="text-[11px] text-secondary opacity-70 italic min-h-[1rem]">
+            {contentCategories.find(c => c.id === category)?.description}
+          </p>
         </div>
       </div>
 
